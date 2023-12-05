@@ -27,7 +27,7 @@ public class Product {
     private Date created;
     @Column(columnDefinition = "int default 0")
     private int quantity;
-    @Column(columnDefinition = "bit default true")
+    @Column(columnDefinition = "bit default 1")
     private boolean status;
     @ManyToOne
     @JoinColumn(name = "catalog_id",referencedColumnName = "catalog_id")

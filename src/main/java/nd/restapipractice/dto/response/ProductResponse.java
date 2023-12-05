@@ -18,5 +18,5 @@ public class ProductResponse {
     private int quantity;
     private boolean status;
     private int catalog;
-//    private String catalogName;
+    private String catalogName;
 }

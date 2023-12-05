@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product,String> {
-    @Query("select p from Product p where p.name like %?1%")
+    @Query("select p from Product p join Categories c on p.catalog.id = c.id where p.name like %?1% or c.name like %?1%")
     List<Product> findByName(String name);
 }
